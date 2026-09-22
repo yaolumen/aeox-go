@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><rect width="200" height="200" fill="#0f172a"/>
+      <rect x="12" y="12" width="176" height="176" fill="none" stroke="#fbbf24" stroke-width="1.5" opacity="0.5"/>
+      <rect x="18" y="18" width="164" height="164" fill="none" stroke="#fbbf24" stroke-width="0.75" opacity="0.3"/>
+      <text x="100" y="96" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="900" letter-spacing="5" fill="#f8fafc">AEOX</text>
+      <line x1="48" y1="116" x2="88" y2="116" stroke="#fbbf24" stroke-width="1.5"/>
+      <path d="M 100 109 L 107 116 L 100 123 L 93 116 Z" fill="#fbbf24"/>
+      <line x1="112" y1="116" x2="152" y2="116" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="100" y="143" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="5" fill="#cbd5e1">BY YAOLUMEN</text>
+      <text x="100" y="164" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9.5" letter-spacing="1.5" fill="#64748b">go.aeox.uk</text>
+    </svg>

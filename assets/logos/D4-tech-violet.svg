@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><rect width="200" height="200" fill="#1a1a2e"/>
+      <path d="M 100 34 L 142 96 L 100 158 L 58 96 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+      <line x1="100" y1="34" x2="100" y2="158" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+      <line x1="58" y1="96" x2="142" y2="96" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+      <path d="M 100 66 L 121 96 L 100 126 L 79 96 Z" fill="#ffffff" opacity="0.3"/>
+      <text x="100" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#ffffff">aeox</text>
+    </svg>

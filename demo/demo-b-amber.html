@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEOX Demo — Amber Accent</title>
+<style>
+:root {
+  --bg: #0f0f0f;
+  --surface: #181818;
+  --surface-2: #222222;
+  --border: #2a2a2a;
+  --border-hover: #3a3a3a;
+  --text: #ececec;
+  --text-muted: #999;
+  --text-light: #666;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --accent-light: rgba(245,158,11,0.1);
+  --accent-glow: rgba(245,158,11,0.06);
+  --font-sans: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  --font-serif: 'Georgia', 'Noto Serif', serif;
+  --font-mono: 'SF Mono', 'JetBrains Mono', monospace;
+  --radius: 8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 14px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; font: inherit; border: none; background: none; color: inherit; }
+
+/* ---- Nav ---- */
+.nav { position: sticky; top: 0; z-index: 40; background: rgba(15,15,15,.92); backdrop-filter: blur(20px); }
+.nav-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { display: flex; align-items: baseline; gap: 6px; }
+.nav-name { font-family: var(--font-serif); font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -.02em; }
+.nav-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-left: 2px; margin-bottom: 2px; display: inline-block; }
+.nav-sub { font-size: 11px; color: var(--text-light); letter-spacing: .04em; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-search-btn { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-muted); }
+.nav-search-btn:hover { border-color: var(--border-hover); color: var(--text); }
+
+/* ---- Hero ---- */
+.hero { max-width: 960px; margin: 0 auto; padding: 48px 24px 40px; text-align: center; }
+.hero-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.hero-title { font-family: var(--font-serif); font-size: 32px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; margin-bottom: 12px; }
+@media (min-width: 640px) { .hero-title { font-size: 42px; } }
+.hero-sub { font-size: 15px; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+.hero-stats { display: flex; justify-content: center; gap: 32px; margin-top: 24px; }
+.hero-stat { text-align: center; }
+.hero-stat-num { font-size: 24px; font-weight: 700; color: var(--accent); font-family: var(--font-mono); }
+.hero-stat-label { font-size: 11px; color: var(--text-light); letter-spacing: .04em; }
+
+/* ---- Section ---- */
+.section { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.section-divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+.section-head { display: flex; align-items: baseline; gap: 12px; margin: 32px 0 20px; }
+.section-title { font-family: var(--font-serif); font-size: 18px; font-weight: 600; }
+.section-link { font-size: 12px; color: var(--accent); margin-left: auto; }
+
+/* ---- Featured Grid ---- */
+.featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 24px; margin-bottom: 40px; }
+.feat-card { cursor: pointer; transition: transform .2s; }
+.feat-card:hover { transform: translateY(-4px); }
+.feat-cover { position: relative; aspect-ratio: 2/3; border-radius: var(--radius); overflow: hidden; background: var(--surface); border: 1px solid var(--border); margin-bottom: 12px; }
+.feat-cover .placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 44px; }
+.feat-badge { position: absolute; bottom: 8px; left: 8px; padding: 3px 10px; font-size: 10px; font-weight: 700; background: var(--accent); color: #111; border-radius: 4px; letter-spacing: .03em; }
+.feat-title { font-size: 14px; font-weight: 500; line-height: 1.4; margin-bottom: 4px; }
+.feat-meta { font-size: 11px; color: var(--text-light); }
+
+/* ---- Two-Column Book Cards ---- */
+.book-grid { display: grid; grid-template-columns: 1fr; gap: 16px; padding-bottom: 80px; }
+@media (min-width: 640px) { .book-grid { grid-template-columns: 1fr 1fr; } }
+.book-card { display: flex; gap: 16px; padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; transition: border-color .15s; }
+.book-card:hover { border-color: var(--accent); }
+.book-cover { width: 64px; height: 86px; flex-shrink: 0; border-radius: 4px; overflow: hidden; background: var(--bg); border: 1px solid var(--border); }
+.book-cover .placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.book-body { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+.book-title { font-size: 14px; font-weight: 600; line-height: 1.3; margin-bottom: 4px; }
+.book-desc { font-size: 12px; color: var(--text-muted); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; }
+.book-footer { display: flex; align-items: center; gap: 8px; }
+.book-format { font-size: 10px; font-weight: 600; color: var(--text-light); background: var(--bg); padding: 2px 8px; border-radius: 3px; font-family: var(--font-mono); }
+.book-lang { font-size: 10px; color: var(--text-light); }
+.book-get { margin-left: auto; padding: 5px 14px; font-size: 11px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: var(--radius); background: var(--accent-light); cursor: pointer; }
+.book-get:hover { background: var(--accent); color: #111; }
+
+/* ---- Footer ---- */
+.footer { max-width: 960px; margin: 0 auto; padding: 32px 24px; border-top: 1px solid var(--border); }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; }
+.footer-text { font-size: 12px; color: var(--text-light); }
+.footer-links { display: flex; gap: 16px; }
+.footer-link { font-size: 12px; color: var(--text-muted); }
+.footer-link:hover { color: var(--accent); }
+
+/* ---- Bottom Nav (Mobile) ---- */
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 40; background: var(--surface); border-top: 1px solid var(--border); padding: 6px 0; padding-bottom: max(6px, env(safe-area-inset-bottom)); display: flex; justify-content: space-around; }
+.bnav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 12px; font-size: 10px; color: var(--text-light); cursor: pointer; }
+.bnav-item svg { width: 20px; height: 20px; }
+.bnav-item.active { color: var(--accent); }
+@media (min-width: 768px) { .bottom-nav { display: none; } }
+
+/* ---- Desktop Category Bar ---- */
+.cat-bar { display: none; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; }
+@media (min-width: 768px) { .cat-bar { display: flex; } }
+.cat-btn { padding: 6px 16px; font-size: 12px; font-weight: 500; color: var(--text-muted); border: 1px solid var(--border); border-radius: 20px; cursor: pointer; transition: all .15s; background: transparent; }
+.cat-btn:hover { color: var(--text); border-color: var(--border-hover); }
+.cat-btn.active { color: #111; background: var(--accent); border-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span class="nav-name">AEOX</span><span class="nav-dot"></span>
+      <span class="nav-sub">Free Ebooks</span>
+    </div>
+    <div class="nav-right">
+      <button class="nav-search-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">Curated Knowledge</div>
+  <h1 class="hero-title">Free Ebooks for<br/>Builders & Makers</h1>
+  <p class="hero-sub">Hand-picked technical books. No paywall, no signup. Just download and read.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">12</div>
+      <div class="hero-stat-label">Ebooks</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">4</div>
+      <div class="hero-stat-label">Categories</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">0</div>
+      <div class="hero-stat-label">Cost</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-head">
+    <div class="section-title">Editor's Pick</div>
+    <a class="section-link" href="#">View all →</a>
+  </div>
+  <div class="featured-grid">
+    <div class="feat-card">
+      <div class="feat-cover"><div class="placeholder">📖</div><div class="feat-badge">FREE</div></div>
+      <div class="feat-title">Python Mastery</div>
+      <div class="feat-meta">Programming · PDF</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-cover"><div class="placeholder">📘</div><div class="feat-badge">FREE</div></div>
+      <div class="feat-title">AI Engineering Handbook</div>
+      <div class="feat-meta">AI & ML · PDF</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-cover"><div class="placeholder">📗</div><div class="feat-badge">FREE</div></div>
+      <div class="feat-title">React Design Patterns</div>
+      <div class="feat-meta">Frontend · PDF</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-cover"><div class="placeholder">📕</div><div class="feat-badge">FREE</div></div>
+      <div class="feat-title">System Design Interview</div>
+      <div class="feat-meta">Architecture · PDF</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider" />
+
+<div class="section">
+  <div class="section-head">
+    <div class="section-title">All Books</div>
+  </div>
+  <div class="cat-bar">
+    <button class="cat-btn active">All</button>
+    <button class="cat-btn">Programming</button>
+    <button class="cat-btn">AI & ML</button>
+    <button class="cat-btn">Frontend</button>
+    <button class="cat-btn">DevOps</button>
+  </div>
+  <div class="book-grid">
+    <div class="book-card">
+      <div class="book-cover"><div class="placeholder">📖</div></div>
+      <div class="book-body">
+        <div class="book-title">Python Mastery: From Zero to Hero</div>
+        <div class="book-desc">Complete guide to Python programming from basics to advanced concepts</div>
+        <div class="book-footer">
+          <span class="book-format">PDF</span>
+          <span class="book-lang">EN / ZH</span>
+          <button class="book-get">Get</button>
+        </div>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover"><div class="placeholder">📘</div></div>
+      <div class="book-body">
+        <div class="book-title">AI Engineering Handbook</div>
+        <div class="book-desc">Build production AI systems from scratch with practical examples</div>
+        <div class="book-footer">
+          <span class="book-format">PDF</span>
+          <span class="book-lang">EN</span>
+          <button class="book-get">Get</button>
+        </div>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover"><div class="placeholder">📗</div></div>
+      <div class="book-body">
+        <div class="book-title">React Design Patterns</div>
+        <div class="book-desc">Advanced patterns for building scalable React applications</div>
+        <div class="book-footer">
+          <span class="book-format">PDF</span>
+          <span class="book-lang">EN</span>
+          <button class="book-get">Get</button>
+        </div>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover"><div class="placeholder">📕</div></div>
+      <div class="book-body">
+        <div class="book-title">System Design Interview</div>
+        <div class="book-desc">Master system design interviews with real-world case studies</div>
+        <div class="book-footer">
+          <span class="book-format">PDF</span>
+          <span class="book-lang">EN / ZH</span>
+          <button class="book-get">Get</button>
+        </div>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover"><div class="placeholder">📙</div></div>
+      <div class="book-body">
+        <div class="book-title">JavaScript Cheat Sheet</div>
+        <div class="book-desc">Quick reference for modern JavaScript ES6+ features</div>
+        <div class="book-footer">
+          <span class="book-format">PDF</span>
+          <span class="book-lang">EN</span>
+          <button class="book-get">Get</button>
+        </div>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="book-cover"><div class="placeholder">📓</div></div>
+      <div class="book-body">
+        <div class="book-title">Kubernetes in Practice</div>
+        <div class="book-desc">Hands-on guide to container orchestration and deployment</div>
+        <div class="book-footer">
+          <span class="book-format">PDF</span>
+          <span class="book-lang">EN</span>
+          <button class="book-get">Get</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-text">&copy; 2026 AEOX</div>
+    <div class="footer-links">
+      <a class="footer-link" href="#">FAQ</a>
+      <a class="footer-link" href="#">About</a>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <div class="bnav-item active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    Home
+  </div>
+  <div class="bnav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    Books
+  </div>
+  <div class="bnav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    Search
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.cat-btn').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));t.classList.add('active')}));
+document.querySelectorAll('.bnav-item').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.bnav-item').forEach(b=>b.classList.remove('active'));t.classList.add('active')}));
+</script>
+</body>
+</html>

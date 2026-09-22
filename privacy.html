@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AEOX — Privacy Policy</title>
+  <meta name="description" content="AEOX Privacy Policy — How we collect, use, and protect your data." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">AEOX</a>
+      <div class="nav-links nav-desktop">
+        <a href="index.html">Store</a>
+      </div>
+    </div>
+  </nav>
+  <script src="assets/legal-nav.js"></script>
+
+  <main class="container">
+    <article class="legal-page">
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: August 5, 2026</p>
+
+      <section>
+        <h2>1. Who We Are</h2>
+        <p>go.aeox.uk ("AEOX Store Lite") is a service operated by <strong>YAOLUMEN TECHNOLOGIES LTD (Company No. 17031764)</strong> ("we", "us", "our"), a digital ebook store. This Privacy Policy is made in accordance with the <strong>UK General Data Protection Regulation (UK GDPR)</strong> and the <strong>Data Protection Act 2018</strong>, and is also compliant with the EU General Data Protection Regulation (EU GDPR) where applicable. It explains how we collect, use, and protect your personal information when you use our service.</p>
+      </section>
+
+      <section>
+        <h2>2. Information We Collect</h2>
+        <h3>2.1 Information You Provide</h3>
+        <ul>
+          <li><strong>Email address</strong>: Collected through Stripe Checkout when you make a purchase. Used to deliver download links and process refund requests.</li>
+          <li><strong>Name</strong>: Collected through Stripe Checkout if provided. Used to personalize your experience and verify identity for support requests.</li>
+        </ul>
+        <h3>2.2 Information Collected Automatically</h3>
+        <ul>
+          <li><strong>IP address</strong>: Logged for security and analytics purposes. We do not use IP addresses for targeted advertising.</li>
+          <li><strong>Browser type and device information</strong>: Collected through standard HTTP headers for compatibility and security.</li>
+          <li><strong>Page visit data</strong>: We track which product pages you view for analytics purposes (page views only, no personal tracking).</li>
+        </ul>
+        <h3>2.3 Payment Information</h3>
+        <p>We <strong>do not</strong> collect or store your credit card details. All payment processing is handled by <strong>Stripe, Inc.</strong> (PCI DSS Level 1 certified). Stripe may collect and process your card number, billing address, and other payment details in accordance with their own <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+      </section>
+
+      <section>
+        <h2>3. How We Use Your Information</h2>
+        <ul>
+          <li>Process and fulfill your ebook orders</li>
+          <li>Generate and deliver download links (valid for 24 hours)</li>
+          <li>Enable download link recovery via email</li>
+          <li>Process refund requests</li>
+          <li>Communicate about your order if needed</li>
+          <li>Maintain security and prevent fraud</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. How We Store Your Data</h2>
+        <p>Your data is stored on our secure server in JSON format. Specifically:</p>
+        <ul>
+          <li><strong>Order data</strong> (email, name, purchase details, download tokens): Stored persistently in server-side files</li>
+          <li><strong>Admin session cookies</strong>: Temporary, expire after 4 hours of inactivity</li>
+          <li><strong>Download tokens</strong>: HMAC-signed, valid for 24 hours, stored in your browser's localStorage for convenience</li>
+          <li><strong>Access logs</strong>: IP addresses and page visits, auto-rotated when exceeding 5MB</li>
+        </ul>
+        <p>We implement reasonable technical measures to protect your data, including encrypted password storage (bcrypt), HMAC-signed download tokens, and admin session authentication.</p>
+      </section>
+
+      <section>
+        <h2>5. Third-Party Services</h2>
+        <table>
+          <thead><tr><th>Service</th><th>Purpose</th><th>Data Accessed</th></tr></thead>
+          <tbody>
+            <tr><td>Stripe</td><td>Payment processing</td><td>Card details, billing info, email</td></tr>
+            <tr><td>AI Providers (Agnes AI)</td><td>Chat assistant</td><td>Chat messages (no personal data sent)</td></tr>
+          </tbody>
+        </table>
+        <p>Each third-party service operates under its own privacy policy. We only share the minimum data necessary for each service to function.</p>
+      </section>
+
+      <section>
+        <h2>6. Cookies and Local Storage</h2>
+        <p>We use minimal cookies and local storage:</p>
+        <ul>
+          <li><strong>Session cookie</strong>: Used only for admin panel authentication. Not used for regular visitors.</li>
+          <li><strong>localStorage</strong>: Download tokens are cached in your browser for convenience (so you can recover download links without re-entering information). This data never leaves your device and can be cleared at any time through your browser settings.</li>
+        </ul>
+        <p>We do <strong>not</strong> use tracking cookies, advertising cookies, or analytics cookies from third parties (Google Analytics, Facebook Pixel, etc.).</p>
+      </section>
+
+      <section>
+        <h2>7. Your Rights</h2>
+        <p>Depending on your jurisdiction, you may have the right to:</p>
+        <ul>
+          <li><strong>Access</strong>: Request a copy of the personal data we hold about you</li>
+          <li><strong>Rectification</strong>: Request correction of inaccurate data</li>
+          <li><strong>Deletion</strong>: Request deletion of your personal data</li>
+          <li><strong>Data portability</strong>: Receive your data in a structured format</li>
+          <li><strong>Objection</strong>: Object to processing of your data</li>
+          <li><strong>Withdraw consent</strong>: Withdraw consent at any time where processing is based on consent</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at <strong>support@aeox.uk</strong>. We will respond within 30 days.</p>
+      </section>
+
+      <section>
+        <h2>8. Data Retention</h2>
+        <ul>
+          <li><strong>Order and payment verification records</strong>: Retained for <strong>6 years</strong> to comply with statutory tax and accounting obligations under UK HMRC regulations, after which they will be permanently deleted or anonymized</li>
+          <li><strong>Access logs</strong>: Auto-rotated when exceeding 5MB; typically retained for 30-90 days</li>
+          <li><strong>Session cookies</strong>: Expire after 4 hours of inactivity</li>
+          <li><strong>Download tokens</strong>: Expire 24 hours after issuance</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>9. International Data Transfers</h2>
+        <p>Our server is located in the United Kingdom. If you access our service from outside the UK, your data may be transferred to and processed in the UK. By using our service, you consent to this transfer. We ensure appropriate safeguards are in place for such transfers.</p>
+      </section>
+
+      <section>
+        <h2>10. Children's Privacy</h2>
+        <p>Our service is not directed at children under 16. We do not knowingly collect personal data from children. If we become aware that we have collected data from a child under 16, we will take steps to delete it promptly.</p>
+      </section>
+
+      <section>
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Significant changes will be communicated via a notice on our website.</p>
+      </section>
+
+      <section>
+        <h2>12. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or your data, please contact:</p>
+        <ul>
+          <li>Email: <strong>support@aeox.uk</strong> (customer support)</li>
+          <li>Email: <strong>contact@yaolumen.com</strong> (corporate / legal inquiries)</li>
+          <li>Website: <strong>go.aeox.uk</strong></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <span>&copy; 2026 AEOX. All rights reserved.</span>
+        <p style="font-size:11px;color:var(--text-light);margin-top:2px;">AEOX Store is a digital publication project operated by <a href="https://me.yaolumen.com" target="_blank" rel="noopener" style="color:var(--text-light);text-decoration:underline;">YAOLUMEN TECHNOLOGIES LTD</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="dmca.html">Copyright</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

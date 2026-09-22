@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><rect width="200" height="200" fill="#1a1a2e"/>
+      <defs><linearGradient id="g1a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e0e7ff"/></linearGradient></defs>
+      <text x="100" y="105" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="110" font-weight="900" letter-spacing="-6" fill="url(#g1a)">AY</text>
+      <text x="100" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="300" letter-spacing="4" fill="#ffffff" opacity="0.9">aeox</text>
+    </svg>

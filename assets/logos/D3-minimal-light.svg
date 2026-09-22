@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><rect width="200" height="200" fill="#ffffff"/><rect x="3" y="3" width="194" height="194" fill="none" stroke="#6366f1" stroke-width="3" rx="0"/>
+      <text x="100" y="80" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="900" letter-spacing="-1" fill="#6366f1">aeox</text>
+      <line x1="42" y1="102" x2="158" y2="102" stroke="#6366f1" stroke-width="2" opacity="0.3"/>
+      <text x="100" y="130" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="300" letter-spacing="2" fill="#4338ca">YaoLumen</text>
+      <text x="100" y="162" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="1" fill="#94a3b8">go.aeox.uk</text>
+    </svg>

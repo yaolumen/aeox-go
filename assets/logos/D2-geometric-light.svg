@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><rect width="200" height="200" fill="#ffffff"/>
+      <polygon points="100,32 158,148 138,148 100,62 62,148 42,148" fill="none" stroke="#312e81" stroke-width="4" stroke-linejoin="round"/>
+      <line x1="100" y1="82" x2="100" y2="168" stroke="#312e81" stroke-width="4" stroke-linecap="round"/>
+      <line x1="72" y1="100" x2="100" y2="82" stroke="#312e81" stroke-width="3" stroke-linecap="round"/>
+      <line x1="128" y1="100" x2="100" y2="82" stroke="#312e81" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="100" cy="168" r="5" fill="#6366f1"/>
+      <text x="100" y="188" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#312e81">YAOLUMEN</text>
+    </svg>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEOX Style Demos — Hub</title>
+<style>
+:root {
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --border: #2a2a2a;
+  --text: #e4e4e7;
+  --text-muted: #888;
+  --text-light: #555;
+  --accent: #3b82f6;
+  --radius: 8px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system, 'Segoe UI', system-ui, sans-serif; font-size: 14px; line-height: 1.6; -webkit-font-smoothing: antialiosed; }
+a { color: var(--accent); text-decoration: none; }
+
+.container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
+
+.header { text-align: center; margin-bottom: 60px; }
+.header-logo { font-size: 32px; font-weight: 700; letter-spacing: -.03em; margin-bottom: 8px; }
+.header-sub { font-size: 14px; color: var(--text-muted); }
+.header-note { font-size: 12px; color: var(--text-light); margin-top: 16px; line-height: 1.6; }
+
+.demos { display: flex; flex-direction: column; gap: 24px; }
+.demo-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color .15s; }
+.demo-card:hover { border-color: var(--accent); }
+.demo-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+.demo-title { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+.demo-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px; }
+.demo-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.demo-tag { font-size: 10px; padding: 3px 10px; background: rgba(255,255,255,.04); border: 1px solid var(--border); border-radius: 4px; color: var(--text-muted); }
+.demo-link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; font-size: 13px; font-weight: 500; background: var(--accent); color: #fff; border-radius: var(--radius); }
+.demo-link:hover { opacity: .9; }
+
+.color-a { color: #34d399; }
+.color-b { color: #f59e0b; }
+.color-c { color: #1a1a1a; }
+
+.comparison { margin-top: 60px; }
+.comparison-title { font-size: 16px; font-weight: 600; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.comparison-table th { text-align: left; padding: 10px 12px; font-weight: 500; color: var(--text-muted); border-bottom: 1px solid var(--border); font-size: 12px; }
+.comparison-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text); }
+.comparison-table tr:last-child td { border-bottom: none; }
+.check { color: #34d399; }
+.cross { color: #555; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="header-logo">AEOX Style Demos</div>
+    <div class="header-sub">3 design directions for the free ebook store</div>
+    <div class="header-note">Open each demo and resize browser to test mobile/desktop.<br/>Use Chrome DevTools → Toggle device toolbar (Ctrl+Shift+M) for mobile view.</div>
+  </div>
+
+  <div class="demos">
+
+    <div class="demo-card">
+      <div class="demo-label" style="color:#34d399;">Demo A</div>
+      <div class="demo-title">Green Accent — Magazine Shelf</div>
+      <div class="demo-desc">Dark theme with emerald green accent. Magazine-style featured carousel + single-column book list. Bottom tab navigation on mobile. Serif titles for reading warmth.</div>
+      <div class="demo-features">
+        <span class="demo-tag">#111 bg + 6px radius</span>
+        <span class="demo-tag">Green accent</span>
+        <span class="demo-tag">Horizontal carousel</span>
+        <span class="demo-tag">Single-column list</span>
+        <span class="demo-tag">Bottom tabs (mobile)</span>
+        <span class="demo-tag">Serif titles</span>
+        <span class="demo-tag">One-tap download</span>
+      </div>
+      <a class="demo-link" href="demo-a-green.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Open Demo A
+      </a>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-label" style="color:#f59e0b;">Demo B</div>
+      <div class="demo-title">Amber Accent — Warm Knowledge</div>
+      <div class="demo-desc">Dark theme with amber/gold accent. Hero with stats + editorial picks grid + two-column book cards. Pill-shaped category filters. Warm, knowledge-oriented feel.</div>
+      <div class="demo-features">
+        <span class="demo-tag">#0f0f0f bg + 8px radius</span>
+        <span class="demo-tag">Amber accent</span>
+        <span class="demo-tag">Hero + stats</span>
+        <span class="demo-tag">Featured grid</span>
+        <span class="demo-tag">Two-column cards</span>
+        <span class="demo-tag">Pill filters</span>
+        <span class="demo-tag">Border hover effect</span>
+      </div>
+      <a class="demo-link" href="demo-b-amber.html" style="background:#f59e0b;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Open Demo B
+      </a>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-label" style="color:#999;">Demo C</div>
+      <div class="demo-title">Minimal White — Clean Light</div>
+      <div class="demo-desc">White background, black accent. Serif hero title + horizontal shelf scroll + clean list. Maximum readability. Minimalist editorial feel — like a high-end bookstore.</div>
+      <div class="demo-features">
+        <span class="demo-tag">White bg</span>
+        <span class="demo-tag">Black accent</span>
+        <span class="demo-tag">Serif hero</span>
+        <span class="demo-tag">Shelf carousel</span>
+        <span class="demo-tag">Clean list</span>
+        <span class="demo-tag">Minimal UI</span>
+        <span class="demo-tag">Maximum readability</span>
+      </div>
+      <a class="demo-link" href="demo-c-white.html" style="background:#1a1a1a;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Open Demo C
+      </a>
+    </div>
+
+  </div>
+
+  <div class="comparison">
+    <div class="comparison-title">Feature Comparison</div>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th style="color:#34d399;">A: Green</th>
+          <th style="color:#f59e0b;">B: Amber</th>
+          <th>C: White</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Dark theme</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td></tr>
+        <tr><td>Serif titles</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Featured carousel</td><td class="check">✓</td><td class="cross">✗ (grid)</td><td class="check">✓</td></tr>
+        <tr><td>Single-column list</td><td class="check">✓</td><td class="cross">✗ (2-col)</td><td class="check">✓</td></tr>
+        <tr><td>Bottom tab nav (mobile)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>One-tap download</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Detail overlay</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+        <tr><td>Hero section</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Reading warmth</td><td>Medium</td><td>High</td><td>High</td></tr>
+        <tr><td>Geek/hacker feel</td><td>High</td><td>Medium</td><td>Low</td></tr>
+        <tr><td>Mobile thumb-friendly</td><td>Best</td><td>Good</td><td>Good</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>

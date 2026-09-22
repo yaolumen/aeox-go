@@ -1,0 +1,8 @@
+node_modules/
+.server.pid
+aeox.pid
+*.log
+.env
+data/
+AUDIT.md
+backup-*/
